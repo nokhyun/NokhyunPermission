@@ -1,11 +1,13 @@
-package com.nokhyun.permission
+package com.nokhyun.samples
 
 import android.Manifest
 import android.content.DialogInterface
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
-import com.nokhyun.nokhyunpermission.databinding.ActivityMainBinding
+import com.nokhyun.permission.Permission
+import com.nokhyun.permission.PermissionListener
+import com.nokhyun.samples.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     private val onPositive = DialogInterface.OnClickListener { dialog, _ -> logger { "onPositive" } }
