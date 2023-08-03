@@ -1,17 +1,9 @@
 plugins {
     alias(libs.plugins.com.android.library)
     alias(libs.plugins.org.jetbrains.kotlin.android)
-    `maven-publish`
 }
 
-publishing {
-    publications {
-        create<MavenPublication>("release") {
-            group = "com.github.nokhyun"
-            version = "1.0.0"
-        }
-    }
-}
+group "com.github.nokhyun"
 
 android {
     namespace = "com.nokhyun.permission"
