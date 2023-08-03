@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="title">Warrning</string>
+    <string name="message">Permissions are required when using the app.</string>
+    <string name="confirm">confirm</string>
+    <string name="cancel">cancel</string>
+</resources>
