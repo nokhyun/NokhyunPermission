@@ -5,7 +5,7 @@ import android.content.DialogInterface
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
-import com.nokhyun.permission.databinding.ActivityMainBinding
+import com.nokhyun.nokhyunpermission.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     private val onPositive = DialogInterface.OnClickListener { dialog, _ -> logger { "onPositive" } }

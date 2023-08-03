@@ -1,3 +1,4 @@
+### 테스트 후 적용 ###
 [versions]
 agp = "8.1.0"
 org-jetbrains-kotlin-android = "1.8.0"
