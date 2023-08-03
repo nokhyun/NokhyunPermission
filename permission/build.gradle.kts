@@ -7,9 +7,8 @@ plugins {
 publishing {
     publications {
         create<MavenPublication>("release") {
-            groupId = "com.nokhyun.permission"
-            artifactId = "permission"
-            version = "1.0.0-alpha"
+            group = "com.github.nokhyun"
+            version = "1.0.0"
         }
     }
 }
