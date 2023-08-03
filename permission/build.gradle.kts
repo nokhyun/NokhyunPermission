@@ -1,7 +1,7 @@
 plugins {
     alias(libs.plugins.com.android.library)
     alias(libs.plugins.org.jetbrains.kotlin.android)
-    id("maven-publish")
+    `maven-publish`
 }
 
 publishing {
@@ -9,13 +9,13 @@ publishing {
         create<MavenPublication>("release") {
             groupId = "com.github.nokhyun"
             artifactId = "permission"
-            version = "1.0.0"
+            version = "1.0.0-rc"
         }
 
         create<MavenPublication>("debug") {
             groupId = "com.github.nokhyun"
             artifactId = "permission"
-            version = "1.0.0"
+            version = "1.0.0-rc"
         }
     }
 }
