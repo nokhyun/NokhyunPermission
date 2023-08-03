@@ -1,9 +1,24 @@
 plugins {
     alias(libs.plugins.com.android.library)
     alias(libs.plugins.org.jetbrains.kotlin.android)
+    id("maven-publish")
 }
 
-group "com.github.nokhyun"
+publishing {
+    publications {
+        create<MavenPublication>("release") {
+            groupId = "com.github.nokhyun"
+            artifactId = "permission"
+            version = "1.0.0"
+        }
+
+        create<MavenPublication>("debug") {
+            groupId = "com.github.nokhyun"
+            artifactId = "permission"
+            version = "1.0.0"
+        }
+    }
+}
 
 android {
     namespace = "com.nokhyun.permission"
@@ -22,11 +37,11 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = "11"
+        jvmTarget = "17"
     }
 }
 

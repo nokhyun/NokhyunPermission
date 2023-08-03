@@ -4,10 +4,6 @@ buildscript{
     dependencies {
         classpath("com.github.dcendents", "android-maven-gradle-plugin", "2.1")
     }
-
-    repositories{
-        mavenCentral()
-    }
 }
 plugins {
     alias(libs.plugins.com.android.application) apply false
