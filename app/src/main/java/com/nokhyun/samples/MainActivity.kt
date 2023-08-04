@@ -5,11 +5,12 @@ import android.content.DialogInterface
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.FragmentActivity
 import com.nokhyun.permission.Permission
 import com.nokhyun.permission.PermissionListener
 import com.nokhyun.samples.databinding.ActivityMainBinding
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : FragmentActivity() {
     private val onPositive = DialogInterface.OnClickListener { dialog, _ -> logger { "onPositive" } }
     private val onNegative = DialogInterface.OnClickListener { dialog, _ -> logger { "onNegative" } }
     private val permissionListener = object : PermissionListener {

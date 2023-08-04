@@ -9,12 +9,13 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
+import androidx.fragment.app.FragmentActivity
 
 /**
  * @author Nokhyun90 on 2023-08-03
  * */
 class Permission private constructor(
-    private val activity: AppCompatActivity,
+    private val activity: FragmentActivity,
     private val builder: Builder
 ) {
     private val permissionListener = builder.permissionListener!!
@@ -89,7 +90,7 @@ class Permission private constructor(
     }
 
     class Builder(
-        private val activity: AppCompatActivity
+        private val activity: FragmentActivity
     ) {
         internal var permissionListener: PermissionListener? = null
         internal var onPositive: DialogInterface.OnClickListener? = null
@@ -129,9 +130,9 @@ class Permission private constructor(
         }
 
         fun build(): Permission {
-            checkNull(singlePermission, multiplePermissions) { throw NullPointerException("Please enter permission") }
-            checkNull(permissionListener) { throw NullPointerException("Please enter permissionListener") }
-            checkAllNotNull(singlePermission, multiplePermissions) { throw NullPointerException("둘중하나만 입력 ㄱㄱㄱ") }
+            checkNull(singlePermission, multiplePermissions) { throw CheckNullException("Please enter permission") }
+            checkNull(permissionListener) { throw CheckNullException("Please enter permissionListener") }
+            checkAllNotNull(singlePermission, multiplePermissions) { throw CheckNotNullException("Please enter only single permission or multiple permission") }
 
             return Permission(
                 activity = activity,
