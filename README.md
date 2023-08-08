@@ -3,8 +3,6 @@
 [![](https://jitpack.io/v/nokhyun/NokhyunPermission.svg)](https://jitpack.io/#nokhyun/NokhyunPermission)
 
 -------
-* JDK 17
-------
 build.gradle(project)
 ```
 allprojects {
@@ -51,6 +49,8 @@ private val multiple = Permission.Builder(this@MainActivity)
 ```
 Alertdialog Custom
 ```
+- Please pass alert builder as the argument
+
 private val multiple = Permission.Builder(this@MainActivity)
         .multiplePermissions(arrayOf(Manifest.permission.CALL_PHONE, Manifest.permission.ACTIVITY_RECOGNITION))
         .permissionListener(permissionListener)
